@@ -1,0 +1,102 @@
+@define-color background rgba(0, 0, 0, 0);
+@define-color card rgba(12, 12, 12, 0.82);
+@define-color border rgba(212, 175, 55, 0.15);
+@define-color text #BDBDBD;
+@define-color gold #D4AF37;
+@define-color red #8E0E18;
+
+* {
+    background-image: none;
+    box-shadow: none;
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+}
+
+window {
+    font-size: 24pt;
+    color: @foreground;
+    background-image: linear-gradient(rgba(11, 11, 12, 0.6), rgba(11, 11, 12, 0.6)), url("/home/lol/.config/hypr/assets/wallpapers/gothic-wallpaper.png");
+    background-size: cover;
+    background-position: center;
+}
+
+button {
+    background-color: @card;
+    color: @text;
+
+    border: 1px solid @border;
+    border-radius: 18px;
+
+    margin: 18px;
+    padding: 24px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+}
+
+button:hover,
+button:focus,
+button:active {
+    background-color: rgba(212, 175, 55, 0.10);
+    color: @gold;
+    border-color: @gold;
+}
+
+/* ---------- ICONOS ---------- */
+
+#lock {
+    background-image: image(url("/home/lol/.config/hypr/assets/wlogout-icons/lock.png"));
+}
+#lock:hover {
+    background-image: image(url("/home/lol/.config/hypr/assets/wlogout-icons/lock-hover.png"));
+}
+
+#logout {
+    background-image: image(url("/home/lol/.config/hypr/assets/wlogout-icons/logout.png"));
+}
+#logout:hover {
+    background-image: image(url("/home/lol/.config/hypr/assets/wlogout-icons/logout-hover.png"));
+}
+
+#suspend {
+    background-image: image(url("/home/lol/.config/hypr/assets/wlogout-icons/sleep.png"));
+}
+#suspend:hover {
+    background-image: image(url("/home/lol/.config/hypr/assets/wlogout-icons/sleep-hover.png"));
+}
+
+#shutdown {
+    background-image: image(url("/home/lol/.config/hypr/assets/wlogout-icons/power.png"));
+}
+#shutdown:hover {
+    background-image: image(url("/home/lol/.config/hypr/assets/wlogout-icons/power-hover.png"));
+}
+
+#reboot {
+    background-image: image(url("/home/lol/.config/hypr/assets/wlogout-icons/restart.png"));
+}
+#reboot:hover {
+    background-image: image(url("/home/lol/.config/hypr/assets/wlogout-icons/restart-hover.png"));
+}
+
+#hibernate {
+    background-image: image(url("/home/lol/.config/hypr/assets/wlogout-icons/hibernate.png"));
+}
+#hibernate:hover {
+    background-image: image(url("/home/lol/.config/hypr/assets/wlogout-icons/hibernate-hover.png"));
+}
+/* ---------- EFECTOS ---------- */
+
+#shutdown:hover {
+    background-color: rgba(142, 14, 24, 0.20);
+    border-color: @red;
+    color: #ff6666;
+}
+
+#reboot:hover,
+#logout:hover,
+#lock:hover,
+#hibernate:hover,
+#suspend:hover {
+    background-color: rgba(212, 175, 55, 0.12);
+}
